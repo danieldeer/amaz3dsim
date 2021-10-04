@@ -1,0 +1,276 @@
+<?xml version="1.0" ?>
+<results>
+  <!--RGBSim output-->
+  <agent_result agent_id="7">
+    <movement_time>5</movement_time>
+    <distance>178</distance>
+    <battery>3590</battery>
+    <risk>
+      <sum_of_risk>8</sum_of_risk>
+      <max_risk>2</max_risk>
+    </risk>
+  </agent_result>
+  <agent_result agent_id="9">
+    <movement_time>21</movement_time>
+    <distance>945</distance>
+    <battery>3518</battery>
+    <risk>
+      <sum_of_risk>60</sum_of_risk>
+      <max_risk>3</max_risk>
+    </risk>
+  </agent_result>
+  <agent_result agent_id="0">
+    <movement_time>22</movement_time>
+    <distance>928</distance>
+    <battery>3535</battery>
+    <risk>
+      <sum_of_risk>42</sum_of_risk>
+      <max_risk>2</max_risk>
+    </risk>
+  </agent_result>
+  <agent_result agent_id="2">
+    <movement_time>25</movement_time>
+    <distance>637</distance>
+    <battery>3576</battery>
+    <risk>
+      <sum_of_risk>48</sum_of_risk>
+      <max_risk>2</max_risk>
+    </risk>
+  </agent_result>
+  <agent_result agent_id="3">
+    <movement_time>18</movement_time>
+    <distance>724</distance>
+    <battery>3094</battery>
+    <risk>
+      <sum_of_risk>48</sum_of_risk>
+      <max_risk>3</max_risk>
+    </risk>
+  </agent_result>
+  <agent_result agent_id="6">
+    <movement_time>16</movement_time>
+    <distance>724</distance>
+    <battery>3098</battery>
+    <risk>
+      <sum_of_risk>60</sum_of_risk>
+      <max_risk>4</max_risk>
+    </risk>
+  </agent_result>
+  <agent_result agent_id="8">
+    <movement_time>26</movement_time>
+    <distance>804</distance>
+    <battery>2967</battery>
+    <risk>
+      <sum_of_risk>67</sum_of_risk>
+      <max_risk>3</max_risk>
+    </risk>
+  </agent_result>
+  <agent_result agent_id="4">
+    <movement_time>27</movement_time>
+    <distance>645</distance>
+    <battery>3264</battery>
+    <risk>
+      <sum_of_risk>52</sum_of_risk>
+      <max_risk>2</max_risk>
+    </risk>
+  </agent_result>
+  <agent_result agent_id="1">
+    <movement_time>32</movement_time>
+    <distance>1087</distance>
+    <battery>2669</battery>
+    <risk>
+      <sum_of_risk>62</sum_of_risk>
+      <max_risk>2</max_risk>
+    </risk>
+  </agent_result>
+  <agent_result agent_id="5">
+    <movement_time>47</movement_time>
+    <distance>1026</distance>
+    <battery>3507</battery>
+    <risk>
+      <sum_of_risk>92</sum_of_risk>
+      <max_risk>2</max_risk>
+    </risk>
+  </agent_result>
+  <network_result>
+    <link link_id="0">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="1">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="2">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="3">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="4">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="5">
+      <sum_of_loudness>48</sum_of_loudness>
+      <max_loudness>1</max_loudness>
+    </link>
+    <link link_id="6">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="7">
+      <sum_of_loudness>46</sum_of_loudness>
+      <max_loudness>2</max_loudness>
+    </link>
+    <link link_id="8">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="9">
+      <sum_of_loudness>41</sum_of_loudness>
+      <max_loudness>1</max_loudness>
+    </link>
+    <link link_id="10">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="11">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="12">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="13">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="14">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="15">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="16">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="17">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="18">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="19">
+      <sum_of_loudness>34</sum_of_loudness>
+      <max_loudness>1</max_loudness>
+    </link>
+    <link link_id="20">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="21">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="22">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="23">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="24">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="25">
+      <sum_of_loudness>18</sum_of_loudness>
+      <max_loudness>1</max_loudness>
+    </link>
+    <link link_id="26">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="27">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="28">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="29">
+      <sum_of_loudness>21</sum_of_loudness>
+      <max_loudness>1</max_loudness>
+    </link>
+    <link link_id="30">
+      <sum_of_loudness>23</sum_of_loudness>
+      <max_loudness>1</max_loudness>
+    </link>
+    <link link_id="31">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="32">
+      <sum_of_loudness>30</sum_of_loudness>
+      <max_loudness>1</max_loudness>
+    </link>
+    <link link_id="33">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="34">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="35">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="36">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="37">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="38">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="39">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="40">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="41">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="42">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="43">
+      <sum_of_loudness>0</sum_of_loudness>
+      <max_loudness>0</max_loudness>
+    </link>
+    <link link_id="44">
+      <sum_of_loudness>52</sum_of_loudness>
+      <max_loudness>1</max_loudness>
+    </link>
+  </network_result>
+</results>

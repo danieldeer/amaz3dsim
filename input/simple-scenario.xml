@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scenario>
+    <network>
+        <nodes>
+            <node id="0" x="0" y="0" z="0" />
+            <node id="1" x="1000" y="0" z="500" />
+            <node id="2" x="500" y="1500" z="0"/>
+            <node id="3" x="500" y="750" z="500"/>
+        </nodes>
+        <links>
+            <link id="0" from="0" to="1" capacity="2"/>
+            <link id="1" from="1" to="2" capacity="2"/>
+            <link id="2" from="2" to="0" capacity="2"/>
+            <link id="3" from="0" to="3" capacity="2"/>
+            <link id="4" from="1" to="3" capacity="2"/>
+            <link id="5" from="3" to="2" capacity="2"/>
+        </links>
+    </network>
+
+    <agents>
+        <agent id="0" speed="100" deliveryOrderId="0"/>
+        <agent id="1" speed="50" deliveryOrderId="1"/>
+        <agent id="2" speed="120" deliveryOrderId="2" batteryLife="100"/>
+    </agents>
+
+    <deliveryOrders>
+        <deliveryOrder id="0" startNodeId="0" endNodeId="2" startTime="0">
+            <route>
+                <linkId>0</linkId>
+                <linkId>1</linkId>
+                <linkId>2</linkId>
+            </route>
+        </deliveryOrder>
+
+        <deliveryOrder id="1" startNodeId="3" endNodeId="1" startTime="10">
+            <!-- No route specified, calculate shortest path using A* algorithm -->
+        </deliveryOrder>
+
+        <deliveryOrder id="2" startNodeId="0" endNodeId="0" startTime="20">
+            <route>
+                <linkId>0</linkId>
+                <linkId>1</linkId>
+                <linkId>2</linkId>
+                <linkId>0</linkId>
+                <linkId>1</linkId>
+                <linkId>2</linkId>
+            </route>
+        </deliveryOrder>
+
+    </deliveryOrders>
+</scenario>

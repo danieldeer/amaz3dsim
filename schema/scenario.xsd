@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Good source: https://www.youtube.com/watch?v=1BjmZHRHDv0 -->
+    <xs:element name="scenario">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Network definition -->
+                <xs:element name="network">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nodes">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="node" maxOccurs="unbounded" minOccurs="2">
+                                        <xs:complexType>
+                                            <xs:attribute name="id" type="xs:integer"/>
+                                            <xs:attribute name="x" type="xs:integer"/>
+                                            <xs:attribute name="y" type="xs:integer"/>
+                                            <xs:attribute name="z" type="xs:integer"/>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+
+                        <xs:element name="links">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="link" maxOccurs="unbounded" minOccurs="1">
+                                    <xs:complexType>
+                                        <xs:attribute name="id" type="xs:integer"/>
+                                        <xs:attribute name="from" type="xs:integer"/>
+                                        <xs:attribute name="to" type="xs:integer"/>
+                                        <xs:attribute name="capacity" type="xs:integer"/>
+                                    </xs:complexType>
+                                </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Agent definition -->
+                <xs:element name="agents">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="agent" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:attribute name="id" type="xs:integer" use="required"/>
+                                    <xs:attribute name="speed" type="xs:integer" use="required"/>
+                                    <!-- needs to refer to one existing delivery order-->
+                                    <xs:attribute name="deliveryOrderId" type="xs:integer" use="required"/>
+                                    <xs:attribute name="batteryLife" type="xs:integer" use="optional"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- Delivery orders definition -->
+                <xs:element name="deliveryOrders">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="deliveryOrder" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="route" maxOccurs="1" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence> <!--A route declared in order, therefore use sequence-->
+                                                    <!-- Refer to links by their IDs -->
+                                                    <xs:element name="linkId" type="xs:integer" maxOccurs="unbounded" minOccurs="1"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+
+                                    <xs:attribute name="id" type="xs:integer"/>
+                                    <xs:attribute name="startNodeId" type="xs:integer"/>
+                                    <xs:attribute name="endNodeId" type="xs:integer"/>
+                                    <xs:attribute name="startTime" type="xs:integer"/> <!-- time shall be input as second of the day -->
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
