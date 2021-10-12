@@ -136,6 +136,11 @@ class ScenarioParser:
                         links.append(link)
                     route = Route(links)
 
+                    if None in links:
+                        # This means the route contains one or more non-existing link
+                        log.error('Route of delivery order ' + str(identifier) + ' contains one or more non-existing links. Check that all links in the route have a capacity bigger than 0')
+                        exit()
+
                     # Check if every link in the route is attached to the next link
                     for i in range(0, len(route.links)-1):
                         # Does the end-node of the current link equal the start-node of the next link?
