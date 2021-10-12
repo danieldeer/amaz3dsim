@@ -81,7 +81,7 @@ class ScenarioParser:
             if start_node_identifier != end_node_identifier and capacity > 0:
                 links.append(Link(identifier, start_node, end_node, capacity))
             else:
-                log.warning('Link ' + identifier + ' is not added to the network because of empty capacity')
+                log.warning('Link ' + str(identifier) + ' is not added to the network because its capacity equals 0')
 
         self.network = Network(nodes, links)
 
