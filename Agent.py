@@ -14,20 +14,29 @@ class Agent:
         self.identifier = identifier
         self.speed = int(speed * Configuration.slot_resolution) # Agent speed is given in distance units per second - but internally we have to use slots per second
         self.delivery_order = delivery_order
-        self.current_link = delivery_order.get_start_link()
+
         self.previous_position = None
         self.position = 0
-        self.current_link.set_slot_occupation_at(self.position)
         self.movement_time = 0
 
         self.current_risk = 0
         self.sum_of_risk = 0
         self.max_risk = 0
 
+        self.current_link = None
+        self.battery = None
+
+        if not self.delivery_order.is_completed():
+            self.current_link = delivery_order.get_start_link()
+            self.current_link.set_slot_occupation_at(self.position)
+
         if battery_life is None:
             battery_life = Agent.DEFAULT_BATTERY_LIFE
 
         self.battery = BatteryFactory.get_battery(battery_life, self)
+
+
+
 
     # We assume that move() is called every simulation step (which is 1 second in real life) starting from the start
     # of the delivery_order
@@ -37,6 +46,10 @@ class Agent:
             return
         if self.delivery_order.is_completed():
             log.warning('Agent ' + str(self.identifier) + ' completed delivery order -> does not move.')
+            return
+        if not self.delivery_order.route:
+            log.warning('Agent ' + str(self.identifier) + ' delivery order has an empty route -> Delivery order is set to finished')
+            self.delivery_order.set_completed()
             return
 
         self.movement_time += 1
@@ -159,6 +172,13 @@ class Agent:
         return self.position / self.current_link.get_number_of_slots()
 
     def get_3d_coordinate(self):
+
+        if self.delivery_order.is_completed():
+            # If the delivery order is complete, the agent has no position anymore
+            # In case an agent has a trivial route (start node = end node), the delivery order is automatically completed.
+            # Battery model initialization makes use of the agent's position, therefore we return the arbitrary 0,0,0 here.
+            return 0, 0, 0
+
         x = self.current_link.start_node.x + self.get_progress() * (
                     self.current_link.end_node.x - self.current_link.start_node.x)
         y = self.current_link.start_node.y + self.get_progress() * (

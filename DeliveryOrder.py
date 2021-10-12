@@ -26,6 +26,9 @@ class DeliveryOrder:
         return (self.route.get_link_at(self.current_link_index) == self.route.links[-1]) and (self.current_link_index == self.number_of_links-1)
 
     def get_start_link(self):
+        if not self.route.links:
+            # If the route doesn't exist, return no start link (special case handling for start node equals end node)
+            return None
         return self.route.get_link_at(0)
 
     def is_completed(self):

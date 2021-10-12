@@ -9,7 +9,7 @@ log_level: INFO # Defines how detailed logging messages you want to receive - yo
 
 # Visualization
 visualization_active: True # If set to True you will see an animation of the simulation (if set to False, performance will increase massively - True shall only be used for validation and development, never when you need fast results as in evolutional algorithms)
-visualization_frame_time: 0.0000 # Sets the waiting time between to animation pictures in seconds
+visualization_frame_time: 0.00001 # Sets the waiting time between to animation pictures in seconds (MUST BE bigger than 0, otherwise 3D visualization won't work - this is a limitation of matplotlib)
 visualization_axis_enabled: True # Only applicable to 3D mode. Enable 3D x,y,z axis during simulation visualization
 visualization_show_nodes: False # If set to True, network nodes will be displayed in the visualization
 visualization_3D_active: False # If set to True, the simulation will be 3D (slow), if set to False, it will be 2D (birds perspective) (significantly faster)
