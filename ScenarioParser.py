@@ -147,6 +147,20 @@ class ScenarioParser:
                         if route.links[i].end_node.identifier == route.links[i+1].end_node.identifier:
                             log.error('Error in route of delivery order ' + str(identifier) + '. Link ' + str(route.links[i].identifier) + ' is not connected to Link ' + str(route.links[i+1].identifier))
                             exit()
+
+                    # Verify that the specified route of the delivery order starts with the specified startNode
+                    if not start_node_identifier == route.links[0].start_node.identifier:
+                        log.error('Error in route of delivery order ' + str(identifier) + '. The first link ' + str(
+                            route.links[0].start_node.identifier) + ' is not connected to the startNode ' + str(start_node_identifier))
+                        exit()
+
+                    # Verify that the specified route of the delivery order ends with the specified endNode
+                    if not end_node_identifier == route.links[0].start_node.identifier:
+                        log.error('Error in route of delivery order ' + str(identifier) + '. The last link ' + str(
+                            route.links[-1].end_node.identifier) + ' is not connected to the endNode ' + str(
+                            end_node_identifier))
+                        exit()
+
                     log.debug('Route of delivery order ' + str(identifier) + ' is valid')
 
                 else:
