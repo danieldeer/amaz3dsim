@@ -1,5 +1,7 @@
 # AMAZ3DSim
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dce0fc6431d142bba9e27993f78bdc73)](https://app.codacy.com/gh/danieldeer/amaz3dsim?utm_source=github.com&utm_medium=referral&utm_content=danieldeer/amaz3dsim&utm_campaign=Badge_Grade_Settings)
+
 AMAZ3DSim is a lightweight python-based 3D network multi-agent simulator. It uses a cell-based congestion model. It calculates risk, battery capacities, travel time and travelled distance of the agents and the loudness the network links experience. AMAZ3DSim is suitable for 3D network optimization tasks.
 ![AMAZ3DSim simulation of OSM Darmstadt scenario](https://github.com/danieldeer/gifs/blob/master/amaz3dsim-daniel-hirsch.gif)
 
