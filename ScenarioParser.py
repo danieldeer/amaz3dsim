@@ -155,9 +155,9 @@ class ScenarioParser:
                         exit()
 
                     # Verify that the specified route of the delivery order ends with the specified endNode
-                    if not end_node_identifier == route.links[0].start_node.identifier:
+                    if not end_node_identifier == route.links[-1].end_node.identifier:
                         log.error('Error in route of delivery order ' + str(identifier) + '. The last link ' + str(
-                            route.links[-1].end_node.identifier) + ' is not connected to the endNode ' + str(
+                            route.links[-1].identifier) + ' is not connected to the endNode ' + str(
                             end_node_identifier))
                         exit()
 
