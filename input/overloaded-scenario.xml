@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<scenario>
+    <network>
+        <nodes>
+            <node id="0" x="0" y="0" z="0" />
+            <node id="1" x="1000" y="1000" z="1000" />
+        </nodes>
+        <links>
+            <link id="0" from="0" to="1" capacity="1"/>
+        </links>
+    </network>
+
+    <agents>
+        <agent id="0" speed="100" deliveryOrderId="0"/>
+        <agent id="1" speed="50" deliveryOrderId="1"/>
+        <agent id="2" speed="100" deliveryOrderId="2"/>
+        <agent id="3" speed="50" deliveryOrderId="3"/>
+        <agent id="4" speed="100" deliveryOrderId="4"/>
+    </agents>
+
+    <deliveryOrders>
+        <deliveryOrder id="0" startNodeId="0" endNodeId="1" startTime="0"/>
+        <deliveryOrder id="1" startNodeId="0" endNodeId="1" startTime="0"/>
+        <deliveryOrder id="2" startNodeId="0" endNodeId="1" startTime="0"/>
+        <deliveryOrder id="3" startNodeId="0" endNodeId="1" startTime="0"/>
+        <deliveryOrder id="4" startNodeId="0" endNodeId="1" startTime="0"/>
+    </deliveryOrders>
+</scenario>

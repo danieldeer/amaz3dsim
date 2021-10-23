@@ -34,6 +34,9 @@ class Scenario:
                 for link in self.network.links:
                     link.update_loudness()
 
+            for link in self.network.links:
+                link.number_of_agents_that_moved_on_this_link_this_timestep = 0
+
             current_time_step += 1
             self.notify_observers()  # Notifies observers that the simulation has progressed. In this case, the only observer is the Visualizer2D or Visualizer3D (if visualization is active) which will update its image afterward
 

@@ -44,6 +44,8 @@ class Agent:
         if self.current_link is None:
             log.warning('Link is None')
             return
+        if self.current_link.number_of_agents_that_moved_on_this_link_this_timestep >= self.current_link.capacity:
+            return
         if self.delivery_order.is_completed():
             log.warning('Agent ' + str(self.identifier) + ' completed delivery order -> does not move.')
             return
@@ -58,6 +60,7 @@ class Agent:
             self.__calculate_risk()
 
         self.__move_on_link()
+        self.current_link.number_of_agents_that_moved_on_this_link_this_timestep += 1
 
         self.battery.discharge()
 

@@ -32,6 +32,10 @@ class Link:
         self.max_loudness = 0
         self.sum_of_loudness = 0
 
+        # Never can more agents move than the capacity allows
+        # Therefore this number has to be tracked
+        self.number_of_agents_that_moved_on_this_link_this_timestep = 0
+
     def update_loudness(self):
         # Loudness is proportional to the number of agents on this link - therefore we measure it this way
         self.current_loudness = sum(self.slot_occupations)
