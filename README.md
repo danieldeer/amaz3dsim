@@ -13,6 +13,8 @@ sudo apt install python3.8
 
 pip install click
 pip install tkinter
+pip install matplotlib
+pip install networkx
 ```
 
 ## Usage
@@ -25,9 +27,9 @@ To open a small help doc listing the parameters of the CommandLineInterface.py
 ```bash
 python3.8 CommandLineInterface.py --help
 ```
-A full command specified all of the following paramters
+A full command specifies all of the following paramters
 ```bash
-python3.8 CommandLineInterface.py --in-file /path/to/scenario.xml --out-file /path/to/output.xml --configfile /path/to/config.xml --random False
+python3.8 CommandLineInterface.py --in-file /path/to/scenario.xml --out-file /path/to/output.xml --config-file /path/to/config.xml --random-mode False
 ```
 If an argument is left out, a standard value is used. 
 
