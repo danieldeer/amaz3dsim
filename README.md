@@ -6,7 +6,7 @@ AMAZ3DSim is a lightweight python-based 3D network multi-agent simulator. It use
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the following dependencies.
 
 ```bash
 sudo apt install python3.8
